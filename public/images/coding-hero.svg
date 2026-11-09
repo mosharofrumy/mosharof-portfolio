@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="700" fill="none" viewBox="0 0 760 700">
+  <defs>
+    <linearGradient id="panel" x1="86" x2="680" y1="126" y2="574" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153D53"/>
+      <stop offset="1" stop-color="#0B2233"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="152" x2="620" y1="198" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B3C"/>
+      <stop offset="1" stop-color="#091A29"/>
+    </linearGradient>
+    <linearGradient id="preview" x1="540" x2="663" y1="289" y2="484" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#82E8E8"/>
+      <stop offset="1" stop-color="#71B7F5"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="184" x2="646" y1="96" y2="558" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EE1E2" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#548BF5" stop-opacity=".04"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternTransform="rotate(12)" patternUnits="userSpaceOnUse">
+      <path stroke="#9BCFE2" stroke-opacity=".1" d="M28 0H0v28"/>
+    </pattern>
+    <filter id="shadow" width="1.3" height="1.4" x="-.15" y="-.15" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16"/>
+      <feOffset dy="16"/>
+      <feComponentTransfer>
+        <feFuncA slope=".3" type="linear"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blur" width="1.7" height="1.7" x="-.35" y="-.35" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <clipPath id="window">
+      <rect width="584" height="398" x="88" y="164" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="414" cy="331" r="217" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="620" cy="132" r="3" fill="#83E8E8"/>
+  <circle cx="105" cy="561" r="3" fill="#75BEEB"/>
+  <circle cx="667" cy="536" r="4" fill="#83E8E8"/>
+  <path stroke="#83E8E8" stroke-opacity=".32" stroke-dasharray="3 9" d="m638 173 38 28v42M116 200l-30 24v41"/>
+
+  <g filter="url(#shadow)">
+    <rect width="660" height="526" x="50" y="82" fill="url(#panel)" rx="34"/>
+    <rect width="660" height="526" x="50" y="82" fill="url(#grid)" rx="34"/>
+    <rect width="584" height="398" x="88" y="164" fill="url(#screen)" rx="18"/>
+    <g clip-path="url(#window)">
+      <path fill="#17364A" d="M88 182a18 18 0 0 1 18-18h548v47H88z"/>
+      <circle cx="111" cy="188" r="5" fill="#F08F79"/>
+      <circle cx="129" cy="188" r="5" fill="#E8C66A"/>
+      <circle cx="147" cy="188" r="5" fill="#7DC99D"/>
+      <rect width="191" height="22" x="188" y="177" fill="#0C2637" rx="7"/>
+      <circle cx="201" cy="188" r="4" fill="#73E3E5"/>
+      <path fill="#AFC6BA" d="M214 185h73v5h-73z" opacity=".6"/>
+      <path stroke="#29485B" d="M88 211h584"/>
+      <path fill="#0B1E2C" d="M88 212h67v350H88z"/>
+      <path stroke="#29485B" d="M155 212v350"/>
+      <text x="106" y="238" fill="#7E998A" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.3">EXPLORER</text>
+      <path fill="#C4EB73" d="m107 258 5 5-5 5-5-5z"/>
+      <text x="118" y="266" fill="#D6E4D9" font-family="Arial,sans-serif" font-size="10">portfolio</text>
+      <path stroke="#436555" d="m111 279 4 4-4 4"/>
+      <text x="122" y="286" fill="#9BB2A3" font-family="Arial,sans-serif" font-size="9">app</text>
+      <rect width="45" height="17" x="100" y="295" fill="#1C4254" rx="4"/>
+      <path fill="#E9C66B" d="M112 300h8v7h-8z" opacity=".9"/>
+      <text x="125" y="307" fill="#E8EEE8" font-family="Arial,sans-serif" font-size="9">page.tsx</text>
+      <path fill="#71C99F" d="M112 322h8v7h-8z" opacity=".85"/>
+      <text x="125" y="329" fill="#91A99A" font-family="Arial,sans-serif" font-size="9">globals.css</text>
+      <path fill="#C995EF" d="M112 344h8v7h-8z" opacity=".85"/>
+      <text x="125" y="351" fill="#91A99A" font-family="Arial,sans-serif" font-size="9">projects.ts</text>
+      <path stroke="#355647" d="M107 369h35"/>
+      <circle cx="111" cy="387" r="4" fill="#79C99B"/>
+      <text x="122" y="390" fill="#91A99A" font-family="Arial,sans-serif" font-size="9">assets</text>
+
+      <path stroke="#29485B" d="M155 237h517"/>
+      <text x="174" y="260" fill="#718B7D" font-family="monospace" font-size="10">1</text>
+      <text x="196" y="260" fill="#C995EF" font-family="monospace" font-size="11">export default</text>
+      <text x="291" y="260" fill="#74C8A0" font-family="monospace" font-size="11">function</text>
+      <text x="357" y="260" fill="#E7C66D" font-family="monospace" font-size="11">Home</text>
+      <text x="391" y="260" fill="#DFE9E0" font-family="monospace" font-size="11">() {</text>
+      <text x="174" y="286" fill="#718B7D" font-family="monospace" font-size="10">2</text>
+      <text x="208" y="286" fill="#C995EF" font-family="monospace" font-size="11">return</text>
+      <text x="258" y="286" fill="#DFE9E0" font-family="monospace" font-size="11">(</text>
+      <text x="174" y="312" fill="#718B7D" font-family="monospace" font-size="10">3</text>
+      <text x="219" y="312" fill="#74C8A0" font-family="monospace" font-size="11">&lt;main</text>
+      <text x="261" y="312" fill="#E7C66D" font-family="monospace" font-size="11">className</text>
+      <text x="324" y="312" fill="#DFE9E0" font-family="monospace" font-size="11">=</text>
+      <text x="335" y="312" fill="#E6AD82" font-family="monospace" font-size="11">"build-with-care"</text>
+      <text x="448" y="312" fill="#74C8A0" font-family="monospace" font-size="11">&gt;</text>
+      <text x="174" y="338" fill="#718B7D" font-family="monospace" font-size="10">4</text>
+      <text x="239" y="338" fill="#74C8A0" font-family="monospace" font-size="11">&lt;h1&gt;</text>
+      <text x="275" y="338" fill="#84E8E4" font-family="monospace" font-size="11">Ideas into impact</text>
+      <text x="394" y="338" fill="#74C8A0" font-family="monospace" font-size="11">&lt;/h1&gt;</text>
+      <text x="174" y="364" fill="#718B7D" font-family="monospace" font-size="10">5</text>
+      <text x="239" y="364" fill="#74C8A0" font-family="monospace" font-size="11">&lt;p&gt;</text>
+      <text x="275" y="364" fill="#A9BCAD" font-family="monospace" font-size="11">Thoughtful digital experiences.</text>
+      <text x="489" y="364" fill="#74C8A0" font-family="monospace" font-size="11">&lt;/p&gt;</text>
+      <text x="174" y="390" fill="#718B7D" font-family="monospace" font-size="10">6</text>
+      <text x="219" y="390" fill="#74C8A0" font-family="monospace" font-size="11">&lt;button</text>
+      <text x="277" y="390" fill="#E7C66D" font-family="monospace" font-size="11">onClick</text>
+      <text x="326" y="390" fill="#DFE9E0" font-family="monospace" font-size="11">=</text>
+      <text x="336" y="390" fill="#E6AD82" font-family="monospace" font-size="11">{launch}</text>
+      <text x="393" y="390" fill="#74C8A0" font-family="monospace" font-size="11">&gt;</text>
+      <text x="174" y="416" fill="#718B7D" font-family="monospace" font-size="10">7</text>
+      <text x="239" y="416" fill="#A9BCAD" font-family="monospace" font-size="11">Explore projects</text>
+      <text x="349" y="416" fill="#74C8A0" font-family="monospace" font-size="11">&lt;/button&gt;</text>
+      <text x="174" y="442" fill="#718B7D" font-family="monospace" font-size="10">8</text>
+      <text x="219" y="442" fill="#74C8A0" font-family="monospace" font-size="11">&lt;/main&gt;</text>
+      <rect width="7" height="18" x="208" y="452" fill="#84E8E4" rx="2"/>
+
+      <path stroke="#29485B" d="M522 212v350"/>
+      <text x="540" y="239" fill="#8BA394" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1">LIVE PREVIEW</text>
+      <rect width="119" height="267" x="538" y="255" fill="#F1F4EB" rx="10"/>
+      <path fill="url(#preview)" d="M538 265a10 10 0 0 1 10-10h99a10 10 0 0 1 10 10v115H538z"/>
+      <circle cx="554" cy="270" r="3" fill="#16382C" opacity=".55"/>
+      <circle cx="565" cy="270" r="3" fill="#16382C" opacity=".4"/>
+      <circle cx="576" cy="270" r="3" fill="#16382C" opacity=".3"/>
+      <rect width="23" height="3" x="551" y="287" fill="#17352C" rx="1.5" opacity=".55"/>
+      <rect width="32" height="3" x="614" y="287" fill="#17352C" rx="1.5" opacity=".4"/>
+      <circle cx="599" cy="326" r="25" fill="#D9F3F0" fill-opacity=".82"/>
+      <path fill="#17687A" d="m592 327 6-7 6 7-6 7z"/>
+      <rect width="72" height="6" x="562" y="362" fill="#17352C" rx="3"/>
+      <rect width="54" height="4" x="571" y="373" fill="#17352C" opacity=".45" rx="2"/>
+      <rect width="50" height="15" x="573" y="392" fill="#14758A" rx="7.5"/>
+      <rect width="88" height="4" x="554" y="423" fill="#DDE4D9" rx="2"/>
+      <rect width="71" height="4" x="554" y="433" fill="#DDE4D9" rx="2"/>
+      <rect width="88" height="41" x="553" y="451" fill="#fff" rx="7"/>
+      <circle cx="569" cy="467" r="8" fill="#D8F3ED"/>
+      <rect width="43" height="4" x="583" y="462" fill="#82968A" rx="2"/>
+      <rect width="30" height="4" x="583" y="470" fill="#D3DDD2" rx="2"/>
+      <path fill="#132F40" d="M88 529h584v33H88z"/>
+      <circle cx="107" cy="545" r="4" fill="#73DDE0"/>
+      <text x="119" y="548" fill="#A9BCAD" font-family="Arial,sans-serif" font-size="9">Ready to build</text>
+      <text x="565" y="549" fill="#81C99D" font-family="Arial,sans-serif" font-size="9">localhost:3000</text>
+    </g>
+  </g>
+
+  <g transform="rotate(-7 590 120)">
+    <rect width="159" height="53" x="505" y="91" fill="#DDF6F2" rx="15"/>
+    <circle cx="529" cy="117" r="10" fill="#17687A"/>
+    <path stroke="#B5F1E8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m525 117 3 3 6-7"/>
+    <text x="547" y="115" fill="#164458" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing=".8">SITE IS LIVE</text>
+    <text x="547" y="130" fill="#567F8D" font-family="Arial,sans-serif" font-size="9">built with care</text>
+  </g>
+
+  <g transform="rotate(6 158 580)">
+    <rect width="208" height="59" x="55" y="564" fill="#EFFAFF" rx="16"/>
+    <rect width="34" height="34" x="68" y="576" fill="#D9F2F1" rx="10"/>
+    <path stroke="#16758A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m81 587-5 6 5 6m8-12 5 6-5 6m-2-15-5 18"/>
+    <text x="111" y="589" fill="#173746" font-family="Arial,sans-serif" font-size="10" font-weight="700">DESIGN  ·  DEVELOP</text>
+    <text x="111" y="605" fill="#557582" font-family="Arial,sans-serif" font-size="9">REACT  /  NEXT.JS  /  NODE</text>
+  </g>
+</svg>

@@ -46,8 +46,8 @@ export const projects: Project[] = [
       "Build organizer dashboards and event analytics",
       "Improve accessibility and automated testing",
     ],
-    liveUrl: "",
-    repoUrl: "",
+    liveUrl: "https://social-care-alpha.vercel.app/",
+    repoUrl: "https://github.com/mosharofrumy/social-care",
     visual: "social",
   },
   {
@@ -82,8 +82,8 @@ export const projects: Project[] = [
       "Introduce saved products and price alerts",
       "Expand market coverage and data sources",
     ],
-    liveUrl: "",
-    repoUrl: "",
+    liveUrl: "https://bazardor-json.vercel.app/",
+    repoUrl: "https://github.com/mosharofrumy/b14-a7-bazar-dor",
     visual: "bazar",
   },
   {
@@ -111,8 +111,8 @@ export const projects: Project[] = [
       "Introduce user accounts and saved routines",
       "Add search, filters, and progress insights",
     ],
-    liveUrl: "",
-    repoUrl: "",
+    liveUrl: "https://fitlog-workout-library-xi.vercel.app/",
+    repoUrl: "https://github.com/mosharofrumy/fitlog-workout-library",
     visual: "fit",
   },
 ];

@@ -6,7 +6,6 @@ import {
   Globe2,
   Layers,
   Mail,
-  MapPin,
   Phone,
   Terminal,
   MonitorSmartphone,
@@ -62,7 +61,7 @@ export default function Home() {
             <div className="availability">
               <span className="pulse" /> OPEN TO WEB DEVELOPMENT OPPORTUNITIES
             </div>
-            <p className="hero-kicker">MOSHAROF HOSSAIN · MERN STACK DEVELOPER</p>
+            <p className="hero-kicker">MOSHAROF HOSSAIN · WEB DEVELOPER · MERN STACK</p>
             <h1>
               I turn ideas into
               <br />
@@ -105,36 +104,18 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-gallery" aria-label="Portraits of Mosharof Hossain">
-            <div className="hero-photo hero-photo-main">
+          <div className="hero-art">
+            <div className="hero-workspace">
               <Image
-                src="/images/05_formal_black_suit_thoughtful.png"
-                alt="Mosharof Hossain in a black suit"
+                src="/images/coding-hero.svg"
+                alt="A code editor and live website preview"
                 fill
                 priority
-                sizes="(max-width: 700px) 68vw, 360px"
-              />
-              <span className="photo-caption">FOCUSED ON WHAT&apos;S NEXT</span>
-            </div>
-            <div className="hero-photo hero-photo-casual">
-              <Image
-                src="/images/06_informal_cream_outfit_front.png"
-                alt="Mosharof Hossain in a cream traditional outfit"
-                fill
-                sizes="(max-width: 700px) 32vw, 190px"
+                sizes="(max-width: 700px) 90vw, 500px"
               />
             </div>
-            <div className="hero-photo hero-photo-outdoor">
-              <Image
-                src="/images/23_casual_checkshirt_sunglasses.png"
-                alt="Mosharof Hossain outdoors"
-                fill
-                sizes="(max-width: 700px) 28vw, 155px"
-              />
-            </div>
-            <div className="gallery-note">
-              <MapPin size={15} />
-              <span>Building from Bangladesh</span>
+            <div className="hero-code-badge" aria-hidden="true">
+              <span>&lt;/&gt;</span> DESIGN <i /> CODE <i /> DEPLOY
             </div>
           </div>
         </div>
@@ -157,6 +138,14 @@ export default function Home() {
                 alt="Mosharof Hossain thinking through a problem"
                 fill
                 sizes="(max-width: 700px) 86vw, 430px"
+              />
+            </div>
+            <div className="about-photo-detail">
+              <Image
+                src="/images/06_informal_cream_outfit_front.png"
+                alt="Mosharof Hossain in a cream traditional outfit"
+                fill
+                sizes="(max-width: 700px) 38vw, 175px"
               />
             </div>
             <span className="about-photo-index">THE PERSON BEHIND THE CODE · 01</span>
@@ -247,24 +236,6 @@ export default function Home() {
                 <p className="eyebrow">DIPLOMA</p>
                 <h3>Diploma in Business Information Technology</h3>
                 <p>Daffodil International Academy</p>
-              </div>
-              <span className="timeline-date">Completed</span>
-            </div>
-            <div className="timeline-item">
-              <span className="timeline-dot" />
-              <div>
-                <p className="eyebrow">HIGHER SECONDARY</p>
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p>Serjabad Rana Safiullah College</p>
-              </div>
-              <span className="timeline-date">Completed</span>
-            </div>
-            <div className="timeline-item">
-              <span className="timeline-dot" />
-              <div>
-                <p className="eyebrow">SECONDARY</p>
-                <h3>Secondary School Certificate (SSC)</h3>
-                <p>Pura DC High School</p>
               </div>
               <span className="timeline-date">Completed</span>
             </div>

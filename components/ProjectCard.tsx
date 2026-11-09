@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Layers3 } from "lucide-react";
+import { ArrowUpRight, Github, Layers3 } from "lucide-react";
 import type { Project } from "@/lib/projects";
 export default function ProjectCard({
   project,
@@ -41,6 +41,24 @@ export default function ProjectCard({
           {project.stack.slice(0, 4).map((s) => (
             <span key={s}>{s}</span>
           ))}
+        </div>
+        <div className="project-card-actions">
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`View ${project.name} live website`}
+          >
+            Live site <ArrowUpRight size={15} />
+          </a>
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`View ${project.name} GitHub repository`}
+          >
+            <Github size={15} /> GitHub
+          </a>
         </div>
         <Link className="text-link" href={`/projects/${project.slug}`}>
           Explore the build <ArrowUpRight size={16} />

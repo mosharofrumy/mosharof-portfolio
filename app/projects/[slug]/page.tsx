@@ -4,6 +4,7 @@ import {
   ArrowLeft,
   ArrowUpRight,
   CheckCircle2,
+  Github,
   Lightbulb,
   Wrench,
 } from "lucide-react";
@@ -56,7 +57,7 @@ export default async function ProjectDetail({
                 target="_blank"
                 rel="noreferrer"
               >
-                Client Repository <ArrowUpRight size={16} />
+                GitHub Repository <Github size={16} />
               </a>
             ) : (
               <span className="link-pending">Repository URL to be added</span>
@@ -116,10 +117,14 @@ export default async function ProjectDetail({
             </div>
             <div className="sidebar-card">
               <h3>Project links</h3>
-              <p>
-                Live and source-code links will be added when the public
-                deployments and repositories are ready.
-              </p>
+              <div className="detail-project-links">
+                <a href={p.liveUrl} target="_blank" rel="noreferrer">
+                  Live website <ArrowUpRight size={15} />
+                </a>
+                <a href={p.repoUrl} target="_blank" rel="noreferrer">
+                  GitHub repository <Github size={15} />
+                </a>
+              </div>
               <Link className="text-link" href="/#contact">
                 Ask me about this project <ArrowUpRight size={16} />
               </Link>

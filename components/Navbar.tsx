@@ -1,7 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X, Code2 } from "lucide-react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { Menu, X, Code2, Moon, Sun } from "lucide-react";
+const themeChangeEvent = "portfolio-theme-change";
+
+function subscribeToTheme(onChange: () => void) {
+  window.addEventListener(themeChangeEvent, onChange);
+  return () => window.removeEventListener(themeChangeEvent, onChange);
+}
+
+function getThemeSnapshot() {
+  return document.documentElement.dataset.theme === "dark";
+}
+
+function getServerThemeSnapshot() {
+  return false;
+}
+
 const links = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
@@ -13,6 +28,26 @@ const links = [
 ];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const darkMode = useSyncExternalStore(
+    subscribeToTheme,
+    getThemeSnapshot,
+    getServerThemeSnapshot,
+  );
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("portfolio-theme");
+    const isDark = savedTheme === "dark";
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    window.dispatchEvent(new Event(themeChangeEvent));
+  }, []);
+
+  function toggleTheme() {
+    const nextIsDark = !darkMode;
+    document.documentElement.dataset.theme = nextIsDark ? "dark" : "light";
+    window.localStorage.setItem("portfolio-theme", nextIsDark ? "dark" : "light");
+    window.dispatchEvent(new Event(themeChangeEvent));
+  }
+
   return (
     <header className="nav-wrap">
       <nav className="nav container">
@@ -31,9 +66,24 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <a className="nav-cta" href="mailto:mosharofrumy@gmail.com">
+        <a
+          className="nav-cta"
+          href="https://wa.me/8801930184182"
+          target="_blank"
+          rel="noreferrer"
+        >
           Let&apos;s talk <span>↗</span>
         </a>
+        <button
+          className="theme-toggle"
+          type="button"
+          aria-label={`Switch to ${darkMode ? "light" : "dark"} theme`}
+          aria-pressed={darkMode}
+          title={`Switch to ${darkMode ? "light" : "dark"} theme`}
+          onClick={toggleTheme}
+        >
+          {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
         <button
           className="menu-btn"
           aria-label="Toggle navigation"
@@ -49,7 +99,13 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a href="mailto:mosharofrumy@gmail.com">Let&apos;s talk ↗</a>
+          <a
+            href="https://wa.me/8801930184182"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Let&apos;s talk ↗
+          </a>
         </div>
       )}
     </header>
