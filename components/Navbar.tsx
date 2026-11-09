@@ -21,7 +21,7 @@ export default function Navbar() {
             <Code2 size={19} />
           </span>
           <span>
-            MOSHAROF<span className="brand-dot">.</span>
+            MOSHAROF <br />HOSSAIN<span className="brand-dot">.</span>
           </span>
         </Link>
         <div className="nav-links">

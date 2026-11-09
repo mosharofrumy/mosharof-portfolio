@@ -16,7 +16,7 @@ export default function ProjectCard({
         aria-label={`View ${project.name} project`}
       >
         <div className="visual-top">
-          <span>0{index + 1} / SELECTED WORK</span>
+          <span>BUILD 0{index + 1} / PRODUCT CASE STUDY</span>
           <ArrowUpRight size={20} />
         </div>
         <div className="visual-mark">
@@ -33,7 +33,7 @@ export default function ProjectCard({
       </Link>
       <div className="project-info">
         <div>
-          <p className="eyebrow">FEATURED PROJECT</p>
+          <p className="eyebrow">BUILT TO SOLVE A REAL NEED</p>
           <h3>{project.name}</h3>
         </div>
         <p>{project.summary}</p>
@@ -43,7 +43,7 @@ export default function ProjectCard({
           ))}
         </div>
         <Link className="text-link" href={`/projects/${project.slug}`}>
-          View project details <ArrowUpRight size={16} />
+          Explore the build <ArrowUpRight size={16} />
         </Link>
       </div>
     </article>

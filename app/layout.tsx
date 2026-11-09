@@ -3,9 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 export const metadata: Metadata = {
-  title: "Mosharof Hossain | MERN Stack Web Developer",
+  title: "Mosharof Hossain | MERN Stack Developer",
   description:
-    "Portfolio of Mosharof Hossain — MERN Stack Web Developer focused on JavaScript, TypeScript and modern web engineering.",
+    "Mosharof Hossain builds thoughtful, full-stack web experiences with React, Next.js, Node.js, and MongoDB.",
 };
 export default function RootLayout({
   children,

@@ -13,10 +13,10 @@ Open http://localhost:3000.
 
 ## Before deployment
 
-1. Add your final one-page resume PDF at `public/resume.pdf` (the hero download button is already wired to this path).
+1. Keep your final resume PDF at `public/resume/resume.pdf` (the hero download button is wired to this path).
 2. Add each project's real live URL and client repository URL in `lib/projects.ts` (`liveUrl` and `repoUrl`). Do not leave placeholder values as fake links.
 3. Confirm the project descriptions and technologies match the final deployed versions.
-4. Replace `public/images/profile-full.png` if you prefer another professional photo.
+4. The homepage portrait collage uses images from `public/images/`; update the image paths in `app/page.tsx` to change the portraits.
 
 ## Deploy to Vercel
 

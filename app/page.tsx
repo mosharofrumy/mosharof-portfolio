@@ -1,17 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowDown,
   ArrowUpRight,
-  Code2,
   Database,
   Globe2,
   Layers,
   Mail,
   MapPin,
   Phone,
-  Github,
-  Linkedin,
   Terminal,
   MonitorSmartphone,
 } from "lucide-react";
@@ -60,30 +56,33 @@ const skills = [
 export default function Home() {
   return (
     <main>
-      <section id="home" className="hero section-pad">
+      <section id="home" className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="availability">
-              <span className="pulse" /> OPEN TO JUNIOR / ENTRY-LEVEL
-              OPPORTUNITIES
+              <span className="pulse" /> OPEN TO WEB DEVELOPMENT OPPORTUNITIES
             </div>
-            <p className="hero-kicker">HELLO, I&apos;M MOSHAROF HOSSAIN</p>
+            <p className="hero-kicker">MOSHAROF HOSSAIN · MERN STACK DEVELOPER</p>
             <h1>
-              Building the web,
+              I turn ideas into
               <br />
-              <span>one idea at a time.</span>
+              <span>useful web products.</span>
             </h1>
             <p className="hero-desc">
-              MERN Stack Web Developer focused on creating responsive,
-              accessible, and practical digital experiences with modern
-              JavaScript technologies.
+              From a clear first click to a dependable database, I build
+              thoughtful web experiences that solve real problems and feel
+              effortless to use.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="/resume.pfd" download>
-                Download Resume <ArrowDown size={17} />
+              <a
+                className="btn btn-primary"
+                href="/resume/resume.pdf"
+                download="Mosharof-Hossain-Resume.pdf"
+              >
+                Get my resume <ArrowDown size={17} />
               </a>
               <a className="btn btn-outline" href="#projects">
-                Explore Projects <ArrowUpRight size={17} />
+                See what I build <ArrowUpRight size={17} />
               </a>
             </div>
             <div className="hero-social">
@@ -92,103 +91,115 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Github size={17} /> GitHub
+                GitHub <ArrowUpRight size={14} />
               </a>
               <a
                 href="https://www.linkedin.com/in/hmmosharof/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Linkedin size={17} /> LinkedIn
+                LinkedIn <ArrowUpRight size={14} />
               </a>
               <a href="mailto:mosharofrumy@gmail.com">
-                <Mail size={17} /> Email
+                Email <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
-          <div className="hero-image-wrap">
-            <div className="image-glow" />
-            <div className="hero-image">
+          <div className="hero-gallery" aria-label="Portraits of Mosharof Hossain">
+            <div className="hero-photo hero-photo-main">
               <Image
-                src="/images/profile-full.png"
-                alt="Professional portrait of Mosharof Hossain"
+                src="/images/05_formal_black_suit_thoughtful.png"
+                alt="Mosharof Hossain in a black suit"
                 fill
                 priority
-                sizes="(max-width: 900px) 80vw, 440px"
+                sizes="(max-width: 700px) 68vw, 360px"
+              />
+              <span className="photo-caption">FOCUSED ON WHAT&apos;S NEXT</span>
+            </div>
+            <div className="hero-photo hero-photo-casual">
+              <Image
+                src="/images/06_informal_cream_outfit_front.png"
+                alt="Mosharof Hossain in a cream traditional outfit"
+                fill
+                sizes="(max-width: 700px) 32vw, 190px"
               />
             </div>
-            <div className="float-card float-code">
-              <Code2 size={18} />
-              <span>
-                Clean code
-                <br />
-                <b>Thoughtful UI</b>
-              </span>
+            <div className="hero-photo hero-photo-outdoor">
+              <Image
+                src="/images/23_casual_checkshirt_sunglasses.png"
+                alt="Mosharof Hossain outdoors"
+                fill
+                sizes="(max-width: 700px) 28vw, 155px"
+              />
             </div>
-            <div className="float-card float-location">
-              <MapPin size={16} />
-              <span>
-                Based in
-                <br />
-                <b>Bangladesh</b>
-              </span>
-            </div>
-            <div className="hero-image-label">
-              WEB DEVELOPER <span>•</span> PROBLEM SOLVER
+            <div className="gallery-note">
+              <MapPin size={15} />
+              <span>Building from Bangladesh</span>
             </div>
           </div>
         </div>
-        <a className="scroll-hint" href="#about">
-          SCROLL TO EXPLORE <ArrowDown size={14} />
-        </a>
+        <div className="hero-proof">
+          <div className="container hero-proof-inner">
+            <span>THOUGHTFUL INTERFACES</span>
+            <i />
+            <span>FULL-STACK FOUNDATIONS</span>
+            <i />
+            <span>BUILT TO BE USEFUL</span>
+          </div>
+        </div>
       </section>
-      <section id="about" className="section-pad section-light">
-        <div className="container">
-          <div className="section-heading">
-            <p className="eyebrow">01 / ABOUT ME</p>
-            <h2>
-              Curious mind. <span>Builder&apos;s mindset.</span>
-            </h2>
+      <section id="about" className="section-pad about-section">
+        <div className="container about-layout">
+          <div className="about-visual">
+            <div className="about-photo">
+              <Image
+                src="/images/20_casual_denim_thoughtful.png"
+                alt="Mosharof Hossain thinking through a problem"
+                fill
+                sizes="(max-width: 700px) 86vw, 430px"
+              />
+            </div>
+            <span className="about-photo-index">THE PERSON BEHIND THE CODE · 01</span>
+            <div className="about-stamp">
+              <span>LEARN</span>
+              <b>MAKE</b>
+              <span>IMPROVE</span>
+            </div>
           </div>
           <div className="about-grid">
             <div className="about-lead">
+              <p className="eyebrow">A PRACTICAL MINDSET. A DEVELOPER&apos;S CRAFT.</p>
+              <h2 className="about-title">
+                Good code matters.
+                <br />
+                <span>So does the person using it.</span>
+              </h2>
               <p className="lead-text">
-                I enjoy turning ideas into useful, well-crafted web experiences.
+                I build with the person on the other side of the screen in mind.
               </p>
               <p>
-                I began my programming journey with HTML, CSS, and JavaScript,
-                then moved into TypeScript, React, and Next.js. I am expanding
-                my full-stack engineering skills through Node.js, Express.js,
-                and MongoDB while building practical projects and learning from
-                real development challenges.
+                My work brings together responsive interfaces, maintainable
+                React and Next.js code, and back-end fundamentals with Node.js,
+                Express, and MongoDB. I care about how a product feels to use
+                and how clearly it works behind the scenes.
               </p>
             </div>
             <div className="about-detail">
               <p>
-                My professional background in documentation, reporting, banking
-                operations, and software management has helped me develop
-                discipline, attention to detail, and an understanding of
-                business workflows.
+                Before web development, I worked across documentation,
+                reporting, banking operations, and software management. That
+                experience taught me to respect the details, understand the
+                workflow, and finish the work—not just make it look done.
               </p>
               <p>
-                I enjoy learning how products work from end to end, solving
-                problems, refining user interfaces, and using AI as a thoughtful
-                development tool—not as a replacement for understanding the
-                code.
+                Now I bring that same care to every build: ask better
+                questions, break down the problem, and keep improving the
+                result.
               </p>
-              <div className="about-facts">
-                <div>
-                  <span>01</span>
-                  <b>Learn by building</b>
-                </div>
-                <div>
-                  <span>02</span>
-                  <b>Focus on clean UI</b>
-                </div>
-                <div>
-                  <span>03</span>
-                  <b>Keep improving</b>
-                </div>
+              <div className="about-principles">
+                <span>01 <b>Start with the user</b></span>
+                <span>02 <b>Build with intention</b></span>
+                <span>03 <b>Refine every detail</b></span>
               </div>
             </div>
           </div>
@@ -197,13 +208,11 @@ export default function Home() {
       <section id="skills" className="section-pad">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">02 / TECHNICAL TOOLKIT</p>
-            <h2>
-              Skills I work <span>with.</span>
-            </h2>
+            <p className="eyebrow">THE TOOLS BEHIND THE EXPERIENCE</p>
+            <h2>From the first click <span>to the data layer.</span></h2>
             <p className="section-sub">
-              A growing toolkit for building modern web applications, from
-              interface to database.
+              A practical full-stack toolkit, chosen to make products fast,
+              clear, and dependable.
             </p>
           </div>
           <div className="skills-grid">
@@ -228,10 +237,8 @@ export default function Home() {
       <section id="education" className="section-pad section-light">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">03 / EDUCATION</p>
-            <h2>
-              Learning is a <span>continuous process.</span>
-            </h2>
+            <p className="eyebrow">THE FOUNDATION</p>
+            <h2>Business knowledge. <span>Technology in practice.</span></h2>
           </div>
           <div className="timeline">
             <div className="timeline-item">
@@ -267,36 +274,35 @@ export default function Home() {
       <section id="experience" className="section-pad">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">04 / EXPERIENCE</p>
-            <h2>
-              Professional experience <span>beyond code.</span>
-            </h2>
+            <p className="eyebrow">EXPERIENCE THAT SHAPES HOW I BUILD</p>
+            <h2>Business operations taught me <span>to see the details.</span></h2>
+            <p className="section-sub">
+              Years of hands-on operational work gave me a practical view of
+              how people, processes, and software fit together.
+            </p>
           </div>
           <article className="experience-card">
             <div className="experience-mark">
               <Layers size={25} />
             </div>
             <div className="experience-main">
-              <p className="eyebrow">FEB 2018 — PRESENT</p>
+              <p className="eyebrow">FEBRUARY 2018 — PRESENT</p>
               <h3>Touch Trade Int.</h3>
               <p className="experience-role">
                 Documentation · Reporting · Banking · Software Management
               </p>
               <ul>
                 <li>
-                  Manage business documentation and operational reporting.
+                  Manage documentation and reporting with accuracy and
+                  consistency.
                 </li>
                 <li>
-                  Handle banking-related documentation and administrative
-                  processes.
+                  Coordinate banking documentation and day-to-day
+                  administrative workflows.
                 </li>
                 <li>
-                  Support software management and day-to-day business
-                  operations.
-                </li>
-                <li>
-                  Apply attention to detail, organization, and problem-solving
-                  across workflows.
+                  Support software management and help business operations
+                  run smoothly.
                 </li>
               </ul>
             </div>
@@ -304,18 +310,16 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section id="projects" className="section-pad section-light">
+      <section id="projects" className="section-pad projects-section">
         <div className="container">
           <div className="section-heading heading-row">
             <div>
-              <p className="eyebrow">05 / SELECTED WORK</p>
-              <h2>
-                Projects that turn <span>ideas real.</span>
-              </h2>
+              <p className="eyebrow">SELECTED BUILDS · REAL PROBLEMS, PRACTICAL THINKING</p>
+              <h2>Useful products. <span>Built with purpose.</span></h2>
             </div>
             <p className="section-sub">
-              A selection of practical projects where I explore full-stack
-              development, UI design, and problem solving.
+              Three projects that put thoughtful interfaces and full-stack
+              problem-solving into practice.
             </p>
           </div>
           <div className="projects-grid">
@@ -328,15 +332,16 @@ export default function Home() {
       <section id="contact" className="section-pad contact-section">
         <div className="container contact-inner">
           <div>
-            <p className="eyebrow">06 / GET IN TOUCH</p>
+            <p className="eyebrow">HAVE A CHALLENGE WORTH SOLVING?</p>
             <h2>
-              Have an idea?
+              Let&apos;s make
               <br />
-              <span>Let&apos;s build it.</span>
+              <span>something useful.</span>
             </h2>
             <p className="contact-desc">
-              I&apos;m open to junior web development opportunities,
-              collaborations, and conversations about building useful products.
+              I&apos;m ready to bring curiosity, care, and a builder&apos;s
+              mindset to a junior web development role or a thoughtful
+              collaboration.
             </p>
           </div>
           <div className="contact-links">
